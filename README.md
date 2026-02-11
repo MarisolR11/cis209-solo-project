@@ -13,6 +13,6 @@ inert wireframe here
 ## System Requirements
 - [X] Implement all pictures provided by business
 - [ ] Ensure that aesthetic follows established brand image
-- [ ] Implement "tatteredReadsLibrariansChoiceBanner.jpg" as a "Librarian's Choice" section
+- [ ] Implement "tatteredReadsLibrariansChoiceBanner.png" as a "Librarian's Choice" section
 
 ## Technical Requirements

@@ -33,3 +33,41 @@ nav a {
 nav a:hover {
     color: darkblue;
 }
+
+/* ====== Issue 2: Search Bar =====*/
+.search-section {
+    text-align: center;
+    margin-top: 20px;
+      /* This controls the overall maximum width the search bar can reach */
+  max-width: 1000px; 
+  width: 100%;
+  display: flex; /* Helps align the input and button neatly */
+  /* Add other styling like margin, padding, etc. */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.search-input {
+  /* This makes the input element fill the width of its parent (.search-container) */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Optional: for a combined look with the button */
+  /* Ensure padding/border is included in width calculation */
+  box-sizing: border-box; 
+}
+
+.search-button {
+  padding: 10px 15px;
+  /* Add other styling for the button */
+}
+/* 
+.search-section input {
+    padding: 8 px;
+    width: 250 px;
+}
+
+.search-section button {
+    padding: 8 px;
+    cursor: pointer;
+} */

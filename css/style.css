@@ -227,3 +227,83 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+/*==== Issue 4: Tattered Reads ====*/
+
+.main-section {
+  margin: 40px;
+  padding: 25px;
+  background-color: gold;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.main-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tattered-banner {
+  display: block;
+  width: 100%;        /* makes it stretch across the section */
+  max-height: 420px;  /* optional so it doesn't get huge */
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: row;      /* makes books horizontal */
+  justify-content: center;  /* centers them */
+  gap: 80px;
+  flex-wrap: nowrap;          /* allows wrapping on smaller screens */
+}
+
+.book-entry {
+  padding: 20px;
+  background-color: gray;
+  border-radius: 5px;
+  width: 250px;             /* keeps each book box consistent */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.book-entry img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.book-entry h3 {
+  margin-bottom: 10px;
+}
+
+.book-details {
+  min-height: 40px;
+  color: gray;
+}
+
+.book {
+    text-align: center;
+}
+
+.book-title {
+    margin: 10px 0 5px 0;
+}
+
+.book-author {
+    margin: 0;
+}
+
+.book-entry img {
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-entry img:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}

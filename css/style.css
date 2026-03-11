@@ -6,6 +6,12 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url("../imgs/blueBookBanner.png");  /* go up from css/ then into imgs */
+    background-size: cover;        /* makes it cover the whole page */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;  /* prevent tiling */
+    margin: 0;
+    padding: 0;
 }
 
 /* ===== Issue 1: Header =====*/
@@ -14,18 +20,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightblue;
+    background-color: gray;
     padding: 15px;
 }
 
 .logo {
-    height: 160px;
-    width: auto;
+    height: 200px;
+    width: 400px;
 }
 
 nav a {
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 100px;
     color: black;
     font-weight: bold;
 }
@@ -71,3 +77,153 @@ nav a:hover {
     padding: 8 px;
     cursor: pointer;
 } */
+
+/*==== Issue 3: Used Books & Categories ====*/
+
+.books-container {
+    display: flex;
+    justify-content: center; /* center flex items */
+    gap: 100px;               /* space between sections */
+    max-width: 1000px;
+    margin: 40px auto;       /* center the container */
+    padding: 0 20px;
+    flex-wrap: wrap;         /* allows stacking on small screens */
+}
+
+/* Used Books & Categories sections share similar flex styling */
+.used-books, .categories {
+    flex: 1 1 45%;           /* ~45% width each, allow grow/shrink */
+    max-width: 450px;        /* prevents stretching too wide */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(42, 236, 250, 0.2);
+    background-color: #a5a1a1;
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+    margin: 0;               /* remove auto margin to allow flex */
+}
+
+/* Banner image at top of used-books */
+.used-books .banner {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* Used Books & Categories sections share similar flex styling */
+.used-books, .categories {
+    flex: 1 1 45%;           /* ~45% width each, allow grow/shrink */
+    max-width: 450px;        /* prevents stretching too wide */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: gold;
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+    margin: 0;               /* remove auto margin to allow flex */
+}
+
+/* Banner image at top of used-books */
+.used-books .banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Books arranged horizontally inside used-books */
+.books-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.book {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.book img {
+    width: 90px;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(3, 88, 167, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.book img:hover {
+    transform: scale(1.05);
+}
+
+.book p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Categories styles */
+.categories h2 {
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.categories li {
+    background-color: rgba(180, 175, 175, 0.85);
+    color: black;
+    padding: 10px 0;
+    width: 110px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories li:hover {
+    background-color: #1e90ff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.category-description {
+    margin-top: 20px;
+    font-style: italic;
+    color: #333;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categories h2 {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.category-image {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}

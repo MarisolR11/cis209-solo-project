@@ -1,319 +1,202 @@
-/* placeholder */
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("../imgs/blueBookBanner.png");  /* go up from css/ then into imgs */
-    background-size: cover;        /* makes it cover the whole page */
-    background-position: center;   /* centers the image */
-    background-repeat: no-repeat;  /* prevent tiling */
-    margin: 0;
-    padding: 0;
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background-image:url("../imgs/blueBookBanner.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
-/* ===== Issue 1: Header =====*/
+/* OUTER WIREFRAME */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: gray;
-    padding: 15px;
+.wireframe{
+border:6px solid black;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 }
 
-.logo {
-    height: 200px;
-    width: 400px;
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background-image: url("../imgs/blueBookBanner.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+padding:25px;
+border-bottom:5px solid black;
 }
 
-nav a {
-    text-decoration: none;
-    margin-left: 100px;
-    color: black;
-    font-weight: bold;
+.logo{
+height:100px;
+width:auto;
 }
 
-nav a:hover {
-    color: darkblue;
+nav a{
+text-decoration:none;
+margin-left:40px;
+color:white;
+font-weight:bold;
 }
 
-/* ====== Issue 2: Search Bar =====*/
-.search-section {
-    text-align: center;
-    margin-top: 20px;
-      /* This controls the overall maximum width the search bar can reach */
-  max-width: 1000px; 
-  width: 100%;
-  display: flex; /* Helps align the input and button neatly */
-  /* Add other styling like margin, padding, etc. */
-  margin: 0 auto;
-  padding: 0;
+nav a:hover{
+color:gold;
 }
 
-.search-input {
-  /* This makes the input element fill the width of its parent (.search-container) */
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px; /* Optional: for a combined look with the button */
-  /* Ensure padding/border is included in width calculation */
-  box-sizing: border-box; 
+
+/* SEARCH BAR */
+
+.search-section{
+display:flex;
+justify-content:center;
+padding:20px;
+border-bottom:5px solid black;
 }
 
-.search-button {
-  padding: 10px 15px;
-  /* Add other styling for the button */
-}
-/* 
-.search-section input {
-    padding: 8 px;
-    width: 250 px;
+.search-input{
+width:400px;
+padding:10px;
+border:1px solid #ccc;
 }
 
-.search-section button {
-    padding: 8 px;
-    cursor: pointer;
-} */
-
-/*==== Issue 3: Used Books & Categories ====*/
-
-.books-container {
-    display: flex;
-    justify-content: center; /* center flex items */
-    gap: 100px;               /* space between sections */
-    max-width: 1000px;
-    margin: 40px auto;       /* center the container */
-    padding: 0 20px;
-    flex-wrap: wrap;         /* allows stacking on small screens */
+.search-button{
+padding:10px 20px;
+margin-left:10px;
 }
 
-/* Used Books & Categories sections share similar flex styling */
-.used-books, .categories {
-    flex: 1 1 45%;           /* ~45% width each, allow grow/shrink */
-    max-width: 450px;        /* prevents stretching too wide */
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(42, 236, 250, 0.2);
-    background-color: #a5a1a1;
-    text-align: center;
-    color: black;
-    box-sizing: border-box;
-    margin: 0;               /* remove auto margin to allow flex */
+
+/* USED BOOKS + CATEGORIES */
+
+.books-container{
+display:flex;
+border-bottom:5px solid black;
 }
 
-/* Banner image at top of used-books */
-.used-books .banner {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 20px;
+.used-books{
+width:50%;
+padding:30px;
+border-right:5px solid black;
+text-align:center;
+background-color:gold;
 }
 
-/* Used Books & Categories sections share similar flex styling */
-.used-books, .categories {
-    flex: 1 1 45%;           /* ~45% width each, allow grow/shrink */
-    max-width: 450px;        /* prevents stretching too wide */
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    background-color: gold;
-    text-align: center;
-    color: black;
-    box-sizing: border-box;
-    margin: 0;               /* remove auto margin to allow flex */
+.categories{
+width:50%;
+padding:30px;
+text-align:center;
+background-color:gold;
 }
 
-/* Banner image at top of used-books */
-.used-books .banner {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 10px;
+.banner{
+width:100%;
+max-height:150px;
+object-fit:cover;
+margin-bottom:20px;
 }
 
-/* Books arranged horizontally inside used-books */
-.books-row {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 20px;
+.books-row{
+display:flex;
+justify-content:center;
+gap:30px;
 }
 
-.book {
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.book img{
+width:90px;
+transition:transform .3s;
 }
 
-.book img {
-    width: 90px;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(3, 88, 167, 0.1);
-    transition: transform 0.3s ease;
+.book img:hover{
+transform:scale(1.05);
 }
 
-.book img:hover {
-    transform: scale(1.05);
+.categories ul{
+list-style:none;
+padding:0;
+display:flex;
+justify-content:center;
+gap:20px;
 }
 
-.book p {
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #333;
+.categories li{
+background:#b4afaf;
+padding:10px;
+width:120px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
 }
 
-/* Categories styles */
-.categories h2 {
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 8px;
+.categories li:hover{
+background:darkblue;
+color:white;
+transform:scale(1.1);
 }
 
-.categories ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
+.category-image{
+margin-top:20px;
+max-width:70%;
 }
 
-.categories li {
-    background-color: rgba(180, 175, 175, 0.85);
-    color: black;
-    padding: 10px 0;
-    width: 110px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* TATTERED READS */
+
+.main-section{
+padding:40px;
+border-bottom:5px solid black;
+background-color:gold;
 }
 
-.categories li:hover {
-    background-color: #1e90ff;
-    color: white;
-    transform: scale(1.1);
+.tattered-banner{
+width:100%;
+max-height:500px;
+object-fit:cover;
+margin-bottom:20px;
 }
 
-.category-description {
-    margin-top: 20px;
-    font-style: italic;
-    color: #333;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+.book-list{
+display:flex;
+justify-content:center;
+gap:80px;
 }
 
-.categories h2 {
-    position: relative;
-    padding-bottom: 8px;
+.book-entry{
+background:gray;
+padding:20px;
+width:220px;
+text-align:center;
+border-radius:5px;
 }
 
-.category-image {
-    display: block;
-    margin: 20px auto 0;
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.book-entry img{
+width:150px;
+height:200px;
+object-fit:cover;
+transition:transform .3s, box-shadow .3s;
 }
 
-/*==== Issue 4: Tattered Reads ====*/
-
-.main-section {
-  margin: 40px;
-  padding: 25px;
-  background-color: gold;
-  border: 1px solid black;
-  border-radius: 8px;
+.book-entry img:hover{
+transform:scale(1.08) translateY(-5px);
+box-shadow:0 15px 25px rgba(0,0,0,.3);
 }
 
-.main-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
-.tattered-banner {
-  display: block;
-  width: 100%;        /* makes it stretch across the section */
-  max-height: 420px;  /* optional so it doesn't get huge */
-  object-fit: cover;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
+/* FOOTER */
 
-.book-list {
-  display: flex;
-  flex-direction: row;      /* makes books horizontal */
-  justify-content: center;  /* centers them */
-  gap: 80px;
-  flex-wrap: nowrap;          /* allows wrapping on smaller screens */
-}
+footer{
+background-image: url("../imgs/blueBookBanner.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
-.book-entry {
-  padding: 20px;
-  background-color: gray;
-  border-radius: 5px;
-  width: 250px;             /* keeps each book box consistent */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.book-entry img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 10px auto;
-}
-
-.book-entry h3 {
-  margin-bottom: 10px;
-}
-
-.book-details {
-  min-height: 40px;
-  color: gray;
-}
-
-.book {
-    text-align: center;
-}
-
-.book-title {
-    margin: 10px 0 5px 0;
-}
-
-.book-author {
-    margin: 0;
-}
-
-.book-entry img {
-    width: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.book-entry img:hover {
-    transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-}
-
-/*=== Issue 5: Footer ===*/
-
-footer {
-    margin-top: auto;
-    background-color: gray;
-    text-align: center;
-    padding: 15px;
-    font-weight: bold;
+color: white;
+text-align: center;
+padding: 15px;
+font-weight: bold;
+border-top: 5px solid black;
 }

@@ -124,7 +124,8 @@ gap:20px;
 }
 
 .categories li{
-background:#b4afaf;
+background:darkblue;
+color: white;
 padding:10px;
 width:120px;
 border-radius:5px;
@@ -133,8 +134,8 @@ font-weight:bold;
 }
 
 .categories li:hover{
-background:darkblue;
-color:white;
+background:gray;
+color:black;
 transform:scale(1.1);
 }
 
@@ -166,9 +167,10 @@ gap:80px;
 }
 
 .book-entry{
-background:gray;
+background:darkblue;
 padding:20px;
 width:220px;
+color: white;
 text-align:center;
 border-radius:5px;
 }

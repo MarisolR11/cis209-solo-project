@@ -1,111 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elephant Bookstore</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elephant Bookstore</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
-    <!--===== Issue 1: Header ===== -->
-<header style="display: flex;">
-    <div>
-        <img class="logo" src="imgs/elephantBookstoreLogo.jpg" alt="Elephant Bookstore Logo">
-    </div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a hefr="#">Categories</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+<body>
+
+<div class="wireframe">
+
+<!-- HEADER -->
+
+<header>
+
+<div>
+<img class="logo" src="imgs/elephantBookstoreLogo.jpg" alt="Elephant Bookstore Logo">
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Categories</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
-<!-- Issue 2: Search Bar -->
+
+<!-- SEARCH BAR -->
 
 <section class="search-section">
-    <input type="text" class="search-input" id="searchInput" placeholder="Search for a book...">
-    <button class="search-button" onclick="searchBooks()">Search</button>
-</section>
-<div id="results"></div>
 
-<!--- Issue 3: Used Book Sale and Categories-->
+<input type="text" class="search-input" placeholder="Search for a book...">
+
+<button class="search-button">Search</button>
+
+</section>
+
+
+<!-- USED BOOKS + CATEGORIES -->
 
 <section class="books-container">
-  <!-- Used Book Sale -->
-  <div class="used-books">
-    <img class="banner" src="imgs/usedBookSaleBanner.png" alt="Used Book Sale Banner">
-    <h2>Used Book Sale</h2>
-    <div class="books-row">
-      <div class="book">
-        <img src="imgs/Twilight.jpg" alt="Twilight">
-        <p>Twilight</p>
-      </div>
-      <div class="book">
-        <img src="imgs/The Hunger Games.jpg" alt="The Hunger Games">
-        <p>The Hunger Games</p>
-      </div>
-      <div class="book">
-        <img src="imgs/The Notebook.jpg" alt="The Notebook">
-        <p>The Notebook</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Categories -->
-  <div class="categories">
-    <h2>Browse by Categories</h2>
-    <ul>
-      <li>Fiction</li>
-      <li>Non-Fiction</li>
-      <li>Romance</li>
-      <li>Mystery</li>
-    </ul>
-    <p class="category-description">
-      Discover your next favorite book from our curated categories!
-    </p>
-    <img src="imgs/Books.jpg" alt="Stack of books" class="category-image">
-  </div>
+<!-- Used Books -->
+
+<div class="used-books">
+
+<img class="banner" src="imgs/usedBookSaleBanner.png" alt="Used Book Sale Banner">
+
+<h2>Used Book Sale</h2>
+
+<div class="books-row">
+
+<div class="book">
+<img src="imgs/Twilight.jpg" alt="Twilight">
+<p>Twilight</p>
+</div>
+
+<div class="book">
+<img src="imgs/The Hunger Games.jpg" alt="The Hunger Games">
+<p>The Hunger Games</p>
+</div>
+
+<div class="book">
+<img src="imgs/The Notebook.jpg" alt="The Notebook">
+<p>The Notebook</p>
+</div>
+
+</div>
+
+</div>
 
 
-  <!-- Section 4: Tattered Reads -->
-  <section class="main-section">
+<!-- Categories -->
 
-     <img src="imgs/tatteredReadsLibrariansChoiceBanner.png"
-       alt="Tattered Reads Librarian's Choice Banner" 
-       class="tattered-banner">
+<div class="categories">
 
-    <div class="book-list">
-        <div class="book-entry">
-             <img src="imgs/The Wizard of Oz.jpg" alt="The Wizard of Oz">
-            <h3 class="book-title">The Wizard of Oz</h3>
-            <p class="book-author">L. Frank Baum</p>
-            <p class="book-details">Space for reviews or ratings</p>
-        </div>
+<h2>Browse by Categories</h2>
 
-        <div class="book-entry">
-            <img src="imgs/A Walk To Remember.jpg" alt="A Walk to Remember">
-            <h3 class="book-title">A Walk to Remember</h3>
-            <p class="book-author">Nicholas Sparks</p>
-            <p class="book-details">Space for reviews or ratings</p>
-        </div>
+<ul>
+<li>Fiction</li>
+<li>Non-Fiction</li>
+<li>Romance</li>
+<li>Mystery</li>
+</ul>
 
-        <div class="book-entry">
-             <img src="imgs/The Great Gatsby.jpg" alt="The Great Gatsby">
-            <h3 class="book-title">The Great Gatsby</h3>
-            <p class="book-author">F. Scott Fitzgerald</p>
-            <p class="book-details">Space for reviews or ratings</p>
-        </div>
-    </div>
-  </section>
+<p class="category-description">
+Discover your next favorite book from our curated categories!
+</p>
+
+<img src="imgs/Books.jpg" alt="Stack of books" class="category-image">
+
+</div>
+
 </section>
 
-<!-- Issue 5: Footer -->
+
+<!-- TATTERED READS -->
+
+<section class="main-section">
+
+<img src="imgs/tatteredReadsLibrariansChoiceBanner.png"
+alt="Tattered Reads Banner"
+class="tattered-banner">
+
+<div class="book-list">
+
+<div class="book-entry">
+<img src="imgs/The Wizard of Oz.jpg" alt="The Wizard of Oz">
+<h3>The Wizard of Oz</h3>
+<p>L. Frank Baum</p>
+<p class="book-details">Space for reviews or ratings</p>
+</div>
+
+<div class="book-entry">
+<img src="imgs/A Walk To Remember.jpg" alt="A Walk to Remember">
+<h3>A Walk to Remember</h3>
+<p>Nicholas Sparks</p>
+<p class="book-details">Space for reviews or ratings</p>
+</div>
+
+<div class="book-entry">
+<img src="imgs/The Great Gatsby.jpg" alt="The Great Gatsby">
+<h3>The Great Gatsby</h3>
+<p>F. Scott Fitzgerald</p>
+<p class="book-details">Space for reviews or ratings</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-    <p>Created by Marisol Rodriguez</p>
+
+<p>Created by Marisol Rodriguez</p>
+
 </footer>
+
+</div>
 
 </body>
 </html>
